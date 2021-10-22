@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
 import Grid from "@mui/material/Grid";
 import axios from "./axios";
@@ -8,8 +8,6 @@ import { Container } from "@mui/material";
 function App() {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
-
-  useEffect(() => {}, []);
 
   const onFormSubmit = async (searchTerm) => {
     const response = await axios.get("search", {
